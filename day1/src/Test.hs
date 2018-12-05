@@ -16,6 +16,9 @@ runTests =
     describe "Day 1 of Advent of code" $ do
       it "should get the sum of a list of Int" $ do
         Frequencies.calculateFrequency [0, 1, 2] `shouldBe` 3
+      it "should get the first duplicated frequency" $ do
+        Frequencies.findFirstDuplicateFrequency [] [7, 7, -2, -7, -4] `shouldBe`
+          14
 
 runPropTests :: IO ()
 runPropTests = do
